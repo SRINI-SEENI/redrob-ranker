@@ -22,7 +22,7 @@ def is_honeypot(cand):
     if len(expert_zero_dur) >= 1:
         return True
         
-    # Check 2: Career job duration vs calendar date mismatch
+    # Check 2: Refined job duration safety margin to 3 months vs calendar date mismatch
     for job in career:
         start_s = job.get("start_date")
         end_s = job.get("end_date")
