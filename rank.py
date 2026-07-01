@@ -87,6 +87,7 @@ def score_candidate(cand):
     score += exp_score
     
     # --- 3. COMPANY BACKGROUND (Max 15 pts) ---
+    # Exclude service firm-only candidates per JD instructions
     # Check if they have ONLY worked at service companies
     companies_worked = [job.get("company", "").strip().lower() for job in career if job.get("company")]
     if not companies_worked:
