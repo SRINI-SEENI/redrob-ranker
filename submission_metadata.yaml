@@ -1,0 +1,47 @@
+# Redrob Hackathon — Submission Metadata
+#
+
+team_name: "wonderer_ai"  # Leaderboard team name
+
+primary_contact:
+  name: "Hackathon Participant"
+  email: "participant@example.com"
+  phone: "+91-9876543210"
+
+team_members:
+  - name: "Hackathon Participant"
+    email: "participant@example.com"
+    role: "ML Engineer"
+
+github_repo: "https://github.com/SRINI-SEENI/redrob-ranker"
+sandbox_link: "https://redrob-ranker-twonskuxwctsrewluevl2g.streamlit.app/"
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+
+compute:
+  platform: "Local CPU Machine"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.14.0"
+  os: "Windows 11"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+ai_tools_used:
+  - "Gemini"
+  - "Claude"
+  - "Cursor"
+
+ai_usage_summary: |
+  Used Gemini and Cursor for code design, refactoring, and local dataset exploration. All scoring rules and honeypot checks were developed, tested, and validated locally.
+
+methodology_summary: |
+  Rule-based candidate ranker filtering out honeypots (via expert skill durations and calendar timeline contradictions) and ranking candidates using a 5-pillar scoring framework: Title, Experience, Company Background (penalizing service-only firms), Core Skills, and Engagement Signals. Completed in under 1 minute on CPU.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
